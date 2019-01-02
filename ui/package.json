@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js",
     "dev:hot": "yarn dev --hot",
-    "test": "jest",
+    "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -15,7 +15,7 @@
     "flow": "flow",
     "format": "pretty-quick",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
-    "validate": "yarn flow && yarn test",
+    "validate": "yarn flow && jest",
     "setup": "yarn install && yarn validate",
     "precommit": "lint-staged && yarn validate"
   },
