@@ -8,10 +8,24 @@ before_install:
 cache:
   yarn: true
   directories:
-    - ~/.npm
+    - "node_modules"
 
-env:
-  matrix:
-    - PACKAGE=ui
+# before_script:
+#   - yarn run lerna run prepublish
 
-script: lerna run test --scope $PACKAGE
+script: 
+  - yarn test
+
+# before_deploy:
+#   - git config --global user.email ${GITHUB_EMAIL}
+#   - git config --global user.name ${GITHUB_USER}
+#   - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/YOUR/PROJECT.git" > /dev/null 2>&1
+#   - git checkout release
+#   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+# deploy:
+#   provider: script
+#   script: "yarn run lerna:publish"
+#   skip_cleanup: true
+#   on:
+#     node: "10"
+#     branch: release
