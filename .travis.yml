@@ -17,8 +17,14 @@ cache:
 install:
   - yarn global add lerna jest
   - lerna bootstrap
+
+matrix:
+  include:
+    - name: "UI"
+      env: PACKAGE_LOCATION=ui
   
 script: 
+  - cd $PACKAGE_LOCATION
   - yarn test
 
 # before_deploy:
