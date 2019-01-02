@@ -1,0 +1,62 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "ui"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --stream",
+    "ui": "yarn lrun --scope ui --stream",
+    "lrun": "lerna run"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "css-loader": "^2.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-import-resolver-jest": "^2.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.0",
+    "flow-bin": "^0.89.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-dom": "^3.0.0",
+    "jest-styled-components": "^6.3.1",
+    "jest-watch-typeahead": "^0.2.0",
+    "lerna": "^3.8.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
+    "react-axe": "^3.0.2",
+    "react-testing-library": "^5.4.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5"
+  },
+  "dependencies": {
+    "ui": "file:ui"
+  }
+}
