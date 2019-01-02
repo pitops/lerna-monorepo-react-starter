@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "8"
+cache:
+  directories:
+    - ~/.npm
+  env:
+    matrix:
+      - PACKAGE=ui
+
+script: lerna run test --scope $PACKAGE
