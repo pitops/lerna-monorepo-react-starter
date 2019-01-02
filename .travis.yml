@@ -7,10 +7,7 @@ before_install:
 
 cache:
   yarn: true
-  directories:
-    - '.eslintcache'
-    - 'node_modules'
-    
+
 env:
   matrix:
     - PACKAGE=ui
