@@ -15,7 +15,8 @@ cache:
 
 install:
   - yarn global add lerna jest
-
+  - lerna bootstrap
+  
 script: 
   - yarn test
 
