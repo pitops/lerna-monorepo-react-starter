@@ -13,6 +13,10 @@ cache:
 # before_script:
 #   - yarn run lerna run prepublish
 
+install:
+  - yarn global add lerna jest
+  - lerna bootstrap
+  
 script: 
   - yarn test
 
