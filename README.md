@@ -1,6 +1,6 @@
 # Lerna Monorepo React Starter
 
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![Greenkeeper badge](https://badges.greenkeeper.io/pitops/lerna-monorepo-react-starter.svg)](https://greenkeeper.io/)
+[![Travis Badge](https://travis-ci.com/pitops/lerna-monorepo-react-starter.svg?branch=master)](https://travis-ci.com/) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![Greenkeeper badge](https://badges.greenkeeper.io/pitops/lerna-monorepo-react-starter.svg)](https://greenkeeper.io/)
 
 ### Setup
 
