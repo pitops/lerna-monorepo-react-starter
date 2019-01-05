@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  displayName: 'UI',
   // explicit declaration that the testing environment is intended for browsers
   testEnvironment: 'jest-environment-jsdom',
   moduleDirectories: [
@@ -11,6 +12,9 @@ module.exports = {
   ],
   setupTestFrameworkScriptFile: '<rootDir>/test/setup.js',
   moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': require.resolve(
+      './test/file-mock.js'
+    ),
     '\\.module\\.css$': 'identity-obj-proxy',
     '\\.(css|sass|scss|less)$': require.resolve('./test/style-mock.js')
   },

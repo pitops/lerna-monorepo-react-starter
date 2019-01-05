@@ -98,3 +98,17 @@ lerna-wizard
 #### Husky pre-commit hook is not working
 
 Most probably you initialized git **after** running `yarn install`. Remove node_modules, yarn.lock and re-run `yarn install`. Also make sure that `cat .git/hooks/pre-commit` exists and has reference to husky.
+
+#### Dependencies seem to break after adding a new dependency to a package
+
+After running `yarn workspace <workspace-name> add <package-name>`
+
+Do a `lerna bootstrap` to link everything together.
+
+### Guidelines
+
+#### When adding a new package
+
+1. Remember to include a package.json and make sure the version is consistent with the rest of the projects.
+
+2. If you have tests using jest, remember to open up `jest.config.js` and add a displayName attribute so that when running tests in CI, it is easy to know for which package they are failing.
