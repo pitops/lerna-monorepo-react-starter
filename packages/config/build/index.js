@@ -1,1 +1,1 @@
-module.exports = { ui: { port: 8000 } };
+module.exports = {ui: {port: 3000}}
