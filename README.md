@@ -93,6 +93,26 @@ If you installed the Lerna Wizard package on your computer, then you can use it 
 lerna-wizard
 ```
 
+### Included Packages
+
+#### Config
+
+This is a package with the purpose of having a centralised area of managing your config. There is a `.env` file provided which can be used to provide env variables for your whole monorepo. However each time you change your `.env` file you need to rebuild the config file.
+
+From the root directory do the following
+
+```bash
+yarn packages/config build
+```
+
+To use the config file which is exported under `packages/build/index.js`, just use the following (the example is given based on current monorepo setup)
+
+```bash
+import { ui } from "@packages/config"
+```
+
+You can read the package code for more info on how it works.
+
 ### FAQ
 
 #### Husky pre-commit hook is not working

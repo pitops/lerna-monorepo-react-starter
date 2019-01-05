@@ -5,15 +5,16 @@
     "packages/*",
     "ui"
   ],
+  "version": "0.0.1",
   "scripts": {
     "dev": "lerna run dev --stream",
     "test": "lerna run test --stream",
-    "ui": "yarn lrun --scope ui --stream",
-    "lrun": "lerna run"
+    "ui": "lerna --scope ui exec -- yarn run",
+    "packages/config": "lerna --scope @packages/config exec -- yarn run"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+      "pre-commit": "lerna --concurrency 1 --no-bail exec -- yarn run precommit"
     }
   },
   "devDependencies": {
