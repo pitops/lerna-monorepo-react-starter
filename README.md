@@ -113,6 +113,8 @@ import { ui } from "@packages/config"
 
 To add configuration like the `.env` file path and define the env variables have a look inside `packages/config/src/index.js` which serves as the main file for your configuration.
 
+Note: The `.env` should never be committed.
+
 ## FAQ
 
 ### Husky pre-commit hook is not working
