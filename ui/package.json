@@ -15,7 +15,7 @@
     "flow": "flow",
     "format": "pretty-quick",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
-    "validate": "yarn flow && jest",
+    "validate": "yarn flow",
     "setup": "yarn install && yarn validate",
     "precommit": "lint-staged && yarn validate"
   },
