@@ -5,13 +5,17 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
+    publicPath: '/'
   },
   resolve: {
     // can import anything in shared folder with the same syntax as if it was in node modules
     // i.e import foo from 'bar'
     // bar being a component under src/shared
     modules: ['node_modules', path.join(__dirname, 'src'), 'shared']
+  },
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     rules: [
