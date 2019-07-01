@@ -34,7 +34,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
-    "eslint-import-resolver-jest": "^2.1.1",
+    "eslint-import-resolver-jest": "^2.1.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.0",
     "flow-bin": "^0.99.0",
