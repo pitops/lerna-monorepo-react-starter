@@ -23,7 +23,7 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
+    "@babel/polyfill": "^7.4.4",
     "eslint": "^5.11.1",
     "jest": "^23.6.0",
     "prop-types": "^15.6.2",
